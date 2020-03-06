@@ -1,0 +1,34 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="exampleInputEmail1">NOME</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="nome" 
+                [(ngModel)]="usuario.nome">
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="addPessoa">DT NASCIMENTO</label>
+                <input class="form-control" id="addPessoa" [(ngModel)]="usuario.dtNasc" type="date">
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="addPessoa">SEXO</label>
+                <select class="form-control" id="addPessoa" [(ngModel)]="usuario.sexo">
+                  <option>FEMININO</option>
+                  <option>MASCULINO</option>
+                </select>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-danger full" (click)="onToggleShowAddPessoa()">CANCELAR</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-dark full" (click)="onSendUsuario()" [disabled]="(usuario.nome === '' || usuario.dtNasc === '' || usuario.sexo === '')">SALVAR</button>
+        </div>
+    </div>
+</div>

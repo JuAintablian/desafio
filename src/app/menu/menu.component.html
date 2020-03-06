@@ -1,0 +1,28 @@
+<div class="menu">
+    <div class="selFiltro">
+    <label for="exampleFormControlSelect1">Ordenar</label>
+    <select name="" id="" class="form-control" [(ngModel)]="selectOrdenacao">
+        <option value="">Selecione</option>
+        <option [value]="item.action"
+        *ngFor="let item of menuConfig.selects.ordenacao"
+        >{{ item.descricao }}</option>
+    </select>
+</div>
+<div class="selFiltro">
+    <label for="exampleFormControlSelect1">Filtrar</label>
+    <select name="" id="" class="form-control" [(ngModel)]="selectFiltro">
+        <option value="">Selecione</option>
+        <option [value]="item.action"
+        *ngFor="let item of menuConfig.selects.filtros"
+        >{{ item.descricao }}</option>
+    </select>
+    </div>
+    <ul class="selFiltro">
+        <li *ngFor="let item of menuConfig.botoes">
+            <button (click)="onSelectMenu(item.action)" class="btn btn-light botao">{{ item.label }}</button>
+        </li>
+        <li>
+            <button (click)="goToCorreio()" class="btn btn-light botao">Correio</button>
+        </li>
+    </ul>
+</div>

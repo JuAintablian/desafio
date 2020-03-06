@@ -1,0 +1,27 @@
+<div class="pessoas">
+  <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="QUALQUER COISA LEGAL PARA SER BUSCADA">
+</div>
+<div class="pessoas">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">NOME</th>
+            <th scope="col">DT NASCIMENTO</th>
+            <th scope="col">SEXO</th>
+            <th scope="col">AÇÕES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listaPessoas | filter:filter; let i = index">
+            <td>{{ item.nome }}</td>
+            <td>{{ item.dtNasc }}</td>
+            <td *ngIf="item.sexo === 'FEMININO'"><i class="fas fa-venus"></i></td>
+            <td *ngIf="item.sexo === 'MASCULINO'"><i class="fas fa-mars"></i></td>
+            <td><button (click)="deleteUsuario(i)">Excluir</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="adicionar">
+        <button (click)="onToggleShowAddPessoa()" class="btn btn-dark">+ ADICIONAR</button>
+      </div>
+    </div>

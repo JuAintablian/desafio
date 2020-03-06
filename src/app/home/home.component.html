@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-header></app-header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <app-menu [menuConfig]="menuConfig" (acaoDoBotao)="acaoDoBotao($event)"></app-menu>
+        </div>
+        <div class="col-md-8">
+            <app-tabela [listaPessoas]="pessoas" (showAddPessoa)="toggleShowAddPessoa()" (delPessoa)="delUsuario($event)"></app-tabela>
+            <app-addpessoa *ngIf="showAddPessoa" (showAddPessoa)="toggleShowAddPessoa()" (sendUsuario)="addUsuario($event)"></app-addpessoa>
+        </div>
+    </div>
+</div>

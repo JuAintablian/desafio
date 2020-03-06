@@ -1,0 +1,14 @@
+<div class="main">
+    <label class="esp">Pesquisar endereço</label>
+    <input class="form-control esp" class="form-control" [(ngModel)]="cep" type="text" placeholder="Insira o CEP">
+    <button class="btn btn-success botao esp" (click)="onSendEndereco()">Pesquisar</button>
+</div>
+
+<div class="main" [hidden]="!recEndereco">
+    <p>CEP: {{recEndereco.cep}}</p>
+    <p>Logradouro: {{recEndereco.logradouro}}</p>
+    <p>Complemento: {{recEndereco.complemento}}</p>
+    <p>Bairro: {{recEndereco.bairro}}</p>
+    <p>Localidade: {{recEndereco.localidade}}</p>
+    <p>UF: {{recEndereco.uf}}</p>
+</div>

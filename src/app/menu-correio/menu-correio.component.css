@@ -1,0 +1,21 @@
+.menu {
+    background-color: #888;
+    height: 100%;
+    padding-top: 20px;
+   }
+   
+   .botao {
+       font-weight: bold !important;
+       width: 100%;
+       margin: 5px;
+   }
+   
+   
+   .selFiltro {
+       margin: 20px;
+       width: 80%;
+       font-weight: bold !important;
+       list-style-type: none;
+       align-items: center;
+       padding: 0 !important;
+   }
