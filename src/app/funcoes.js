@@ -20,8 +20,12 @@ const dezAnos = pessoas
 console.log(dezAnos);
 
 //Função Filter: percorre todo o array, fazendo um novo array somente com os itens que possuem as condições descritas na função filter()
-// const mulher = pessoas.filter( (pessoas) => pessoas.sexo === 'FEM');
-// console.log(mulher);
+const mulher = pessoas.filter( (pessoas) => pessoas.sexo === 'FEM');
+console.log(mulher);
+
+//Função Find: percorre todo o array, retornando somente o primeiro elemento que encontrar com as condições passadas na função find()
+const mulheres = pessoas.find( (pessoas) => pessoas.sexo === 'FEM');
+console.log(mulheres);
 
 //Função Reducer:
 const idadeMedia = pessoas.reduce( (prevVal, pessoas) => (prevVal + pessoas.idade) / pessoas.length, 0);
